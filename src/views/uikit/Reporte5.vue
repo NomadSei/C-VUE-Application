@@ -41,8 +41,6 @@ export default {
     const loadData = () => {
       loading.value = true;
       error.value = null;
-
-      // Realizar la solicitud al servidor con el año ingresado
       fetch(`http://204.236.201.162:8080/?year=${year.value}`)
         .then(response => {
           if (!response.ok) {
@@ -67,7 +65,6 @@ export default {
         });
     };
 
-    // Llamar a loadData al montar el componente o en el evento necesario
     onMounted(loadData);
 
     const createChart = () => {
