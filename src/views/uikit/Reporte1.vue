@@ -36,8 +36,7 @@ export default {
     const error = ref(null);
 
     onMounted(() => {
-      // Cambiar la URL para usar el proxy en Vercel
-      fetch('http://204.236.201.162:8080') // Llamada al endpoint de la función serverless
+      fetch('http://204.236.201.162:8080')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error al cargar los datos: ' + response.statusText);
