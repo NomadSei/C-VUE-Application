@@ -32,7 +32,6 @@ setup() {
     const error = ref(null);
 
     onMounted(() => {
-        // Cambiar la URL para usar el proxy en Vercel
         fetch('http://204.236.201.162:8080')
             .then(response => {
                 if (!response.ok) {
